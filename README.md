@@ -88,3 +88,8 @@ While RFC 4122 UUIDv1s do include a time component, there aren't enough bytes of
 To fit into a 64-bit number space, Snowflake IDs and its derivatives require coordination to avoid collisions, which significantly increases the deployment complexity and operational burden.
 
 A KSUID includes 128 bits of pseudorandom data ("entropy"). This number space is 64 times larger than the 122 bits used by the well-accepted RFC 4122 UUIDv4 standard. The additional timestamp component can be considered "bonus entropy" which further decreases the probability of collisions, to the point of physical infeasibility in any practical implementation.
+
+Some google insights: 
+
+![image](https://user-images.githubusercontent.com/8538115/149848304-89058d53-3f4f-4acd-bfe2-6fd331d93e2e.png)
+
