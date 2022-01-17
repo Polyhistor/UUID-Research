@@ -51,3 +51,40 @@ Each new client exponentially increases the chance of collision in the same way 
 Because of the nature of this problem, it's possible to build an app from the ground up and scale it to a million users before this problem rears its head. By the time you notice the problem (when your peak hour use requires dozens of ids to be created per ms), if your db doesn't have unique constraints on the id because you thought your guids were safe, you're in a world of hurt. Your users start to see data that doesn't belong to them because the db just returns the first ID match it finds.
 
 Alternatively, you've played it safe and you only let your database create ids. Writes only happen on a master database, and load is spread out over read replicas. But with this kind of strain, you have to start scaling your database writes horizontally, too, and suddenly your application starts to crawl (if the db is smart enough to guarantee unique ids between write hosts), or you start getting id collisions between different db hosts, so your write hosts don't agree about which ids represent which data.
+
+# ULID 
+
+Universally Unique Lexicographically Sortable Identifier is a good unique identifier when sorting is required. 
+
+## Features 
+
+- bundle size = 2.5kB minified, 1.2kB minifized + gzipped (https://bundlephobia.com/package/ulid@2.3.0)
+* 128-bit compatibility with UUID
+* 1.21e+24 unique ULIDs per millisecond
+* Lexicographically sortable!
+* Canonically encoded as a 26 character string, as opposed to the 36 character UUID
+* Uses Crockford's base32 for better efficiency and readability (5 bits per character)
+* Case insensitive
+* No special characters (URL safe)
+* Monotonic sort order (correctly detects and handles the same millisecond)
+
+Specification can be found at ( https://github.com/ulid/spec )
+
+# KSUID 
+
+ksuid is an efficient, comprehensive, battle-tested Go library for generating and parsing a specific kind of globally unique identifier called a KSUID. This library serves as its reference implementation.
+
+## Features
+
+- bundle size = 3.1kB minified, 1.5kB minifized + gzipped (https://bundlephobia.com/package/ksuid@3.0.0)
+* Naturally ordered by generation time
+* Collision-free, coordination-free, dependency-free
+* Highly portable representations
+* comes with it's own CLI
+
+
+While RFC 4122 UUIDv1s do include a time component, there aren't enough bytes of randomness to provide strong protection against collisions (duplicates). With such a low amount of entropy, it is feasible for a malicious party to guess generated IDs, creating a problem for systems whose security is, implicitly or explicitly, sensitive to an adversary guessing identifiers.
+
+To fit into a 64-bit number space, Snowflake IDs and its derivatives require coordination to avoid collisions, which significantly increases the deployment complexity and operational burden.
+
+A KSUID includes 128 bits of pseudorandom data ("entropy"). This number space is 64 times larger than the 122 bits used by the well-accepted RFC 4122 UUIDv4 standard. The additional timestamp component can be considered "bonus entropy" which further decreases the probability of collisions, to the point of physical infeasibility in any practical implementation.
