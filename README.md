@@ -26,6 +26,8 @@ Taking over UUID slowly, Nanoid is a faster alternative. It covers a wider range
 - collision rate is low
 - it uses hardware random generator. can be used in clusters.
 
+On Github, Nanoid has more versions, updates more frequently, fewer open bugs, fewer open pull requests, and more stars.
+
 # CUID
 
 CUID focuses on providing unique identifiers to web applications to improve horizontal scaling and sequential lookup speed. 638,000 downloads
