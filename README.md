@@ -16,7 +16,7 @@ UUID is now supported in browser natively ( https://developer.mozilla.org/en-US/
 
 ## Example: 
 
-1d6d60e0-af2f-41a8-b8b7-9be020c1f6ab
+**1d6d60e0-af2f-41a8-b8b7-9be020c1f6ab
 
 # NanoID
 
@@ -36,7 +36,7 @@ On Github, Nanoid has more versions, updates more frequently, fewer open bugs, f
 
 ## Example: 
 
-QDfI9uDW6Hm-p6zzhcoTI
+**QDfI9uDW6Hm-p6zzhcoTI
 
 # CUID
 
@@ -64,7 +64,7 @@ Alternatively, you've played it safe and you only let your database create ids. 
 
 ## Example
 
-ckyjcq3xg00002y6ca9p9fovr 
+**ckyjcq3xg00002y6ca9p9fovr 
 
 # ULID 
 
@@ -86,7 +86,7 @@ Specification can be found at ( https://github.com/ulid/spec )
 
 ## Example
 
-01FSN7VQXZTHC8XFHZ05PSN4K2 
+**01FSN7VQXZTHC8XFHZ05PSN4K2 
 
 # KSUID 
 
@@ -109,7 +109,7 @@ A KSUID includes 128 bits of pseudorandom data ("entropy"). This number space is
 
 ## Example
 
-23qadnKGcrLHYA26SZYiYyKCPJU 
+**23qadnKGcrLHYA26SZYiYyKCPJU 
 
 # Google insights 
 
