@@ -14,6 +14,10 @@ This is perhasp the most commonly utilised unique identifier among developers po
  
 UUID is now supported in browser natively ( https://developer.mozilla.org/en-US/docs/Web/API/Crypto/randomUUID )
 
+## Example: 
+
+1d6d60e0-af2f-41a8-b8b7-9be020c1f6ab
+
 # NanoID
 
 Taking over UUID slowly, Nanoid is a faster alternative. It covers a wider range of alphabets and can be even run on clusters! 19M downloads weekly.
@@ -29,6 +33,10 @@ Taking over UUID slowly, Nanoid is a faster alternative. It covers a wider range
 - it uses hardware random generator. can be used in clusters.
 
 On Github, Nanoid has more versions, updates more frequently, fewer open bugs, fewer open pull requests, and more stars.
+
+## Example: 
+
+QDfI9uDW6Hm-p6zzhcoTI
 
 # CUID
 
@@ -54,6 +62,10 @@ Because of the nature of this problem, it's possible to build an app from the gr
 
 Alternatively, you've played it safe and you only let your database create ids. Writes only happen on a master database, and load is spread out over read replicas. But with this kind of strain, you have to start scaling your database writes horizontally, too, and suddenly your application starts to crawl (if the db is smart enough to guarantee unique ids between write hosts), or you start getting id collisions between different db hosts, so your write hosts don't agree about which ids represent which data.
 
+## Example
+
+ckyjcq3xg00002y6ca9p9fovr 
+
 # ULID 
 
 Universally Unique Lexicographically Sortable Identifier is a good unique identifier when sorting is required. 
@@ -71,6 +83,10 @@ Universally Unique Lexicographically Sortable Identifier is a good unique identi
 * Monotonic sort order (correctly detects and handles the same millisecond)
 
 Specification can be found at ( https://github.com/ulid/spec )
+
+## Example
+
+01FSN7VQXZTHC8XFHZ05PSN4K2 
 
 # KSUID 
 
@@ -90,6 +106,10 @@ While RFC 4122 UUIDv1s do include a time component, there aren't enough bytes of
 To fit into a 64-bit number space, Snowflake IDs and its derivatives require coordination to avoid collisions, which significantly increases the deployment complexity and operational burden.
 
 A KSUID includes 128 bits of pseudorandom data ("entropy"). This number space is 64 times larger than the 122 bits used by the well-accepted RFC 4122 UUIDv4 standard. The additional timestamp component can be considered "bonus entropy" which further decreases the probability of collisions, to the point of physical infeasibility in any practical implementation.
+
+## Example
+
+23qadnKGcrLHYA26SZYiYyKCPJU 
 
 # Google insights 
 
