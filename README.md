@@ -10,7 +10,7 @@ This is perhasp the most commonly utilised unique identifier among developers po
 - zero dependencies
 - comes in with it's own CLI
 - high security
-- collision rate is low
+- collision rate is low ( depending on the settings )
  
 UUID is now supported in browser natively ( https://developer.mozilla.org/en-US/docs/Web/API/Crypto/randomUUID )
 
