@@ -2,7 +2,7 @@
 
 # UUID V4
 
-This is perhasp the most commonly utilised unique identifier among developers popularised by RFC4122, the NPM package is being downloaded 68 million times weekly.
+This is perhasp the most commonly utilised unique identifier among developers popularised by RFC4122, the NPM package is being downloaded 68 million times weekly
 
 ## Features
 
